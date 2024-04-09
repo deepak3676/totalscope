@@ -1,0 +1,24 @@
+<section class="pricing-page">
+  <div class="container">
+    <div class="top">
+    <h6>Single Family Pricing Tiers</h6>
+    <h3> Start with us and your first file <span>IS FREE.</span><br>
+      If you’re satisfied, continue with <span>$297</span> for all files. </h3>
+      <p>*Commercial & MultiFamily files are billed at 1.5% of the increase from client-submitted insurance bid to the <br> TotalScope estimate. TotalScope will invoice separately for these files. <br></p>
+      <p> Initial Inspection Reports (inside app, optional feature) - $4/file</p>
+    </div>
+  </div>
+  <div class="section-two">
+    <div class="d-flex flex-column align-items-center text-center w-100 container-md">
+      <div class="section-two-main">Pricing Tiers</div>
+      <div style="justify-content: center" class="d-flex align-items-center w-100 card-flex">
+        <pricing-card *ngFor="let item of items" [pricingCardData]="item"></pricing-card>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+
+
+ 

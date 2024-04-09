@@ -1,0 +1,35 @@
+<div class="personal-info-container">
+  <div class="heading-block">
+    <div class="heading">Add New Owner</div>
+    <div class="sub-heading">Create property owner profile</div>
+  </div>
+  <div class="form">
+    <form [formGroup]="profileForm">
+      
+      <div class="form-fields">
+        <kendo-formfield>
+          <kendo-label [for]="firstName" text="First Name:"></kendo-label>
+          <kendo-textbox formControlName="firstName" [clearButton]="true" #firstName required></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield>
+          <kendo-label [for]="lastName" text="Last Name:"></kendo-label>
+          <kendo-textbox formControlName="lastName" [clearButton]="true" #lastName required></kendo-textbox>
+        </kendo-formfield>
+      </div>
+
+      <div class="form-fields">
+        <kendo-formfield>
+          <kendo-label [for]="phone" text="Phone:"></kendo-label>
+          <kendo-textbox formControlName="phone" [clearButton]="true" placeholder="(303) 030-3303" #phone required></kendo-textbox>
+        </kendo-formfield>
+
+        <kendo-formfield>
+          <kendo-label [for]="email" text="Email:"></kendo-label>
+          <kendo-textbox formControlName="email" [clearButton]="true" placeholder="test@website.com" #email required></kendo-textbox>
+        </kendo-formfield>
+      </div>
+
+    </form>
+  </div>
+</div>

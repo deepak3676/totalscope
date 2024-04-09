@@ -1,0 +1,74 @@
+<div class="clients-details-wrapper">
+   <div class="heading-of-title">
+    <div class="address">{{ownerDetail?.streetnumber}} {{ ownerDetail?.streetname}} </div>
+       <h6 class="client-heading"><span class="title-text">Client:</span> 
+        <span class="owner-name">{{ ownerDetail?.owner_full_name }}</span></h6>
+   </div>
+   <div class="date-button-wrap">
+    <div class="date-wrap">
+        <h5> File Creation Date:</h5>
+       <span>{{ ownerDetail?.datetimecreated}}</span>
+      </div>
+      <div class="button-group">
+           <button kendoButton class="button-file">
+               Withdraw File
+           </button>
+           <button kendoButton class="button-submit">
+               Submit File
+           </button>
+      </div>
+   </div>
+  
+</div>
+
+
+<div class="main-tab-wrapper">
+    <div class="row h-100">
+          <div class="col-8 p-0">
+            <div class="node-warp">
+                <kendo-tabstrip (tabSelect)="onSelect($event)">
+                    <kendo-tabstrip-tab title="Notes" [selected]="tabSection === 'Notes'">      
+                      <ng-template kendoTabContent>
+                       <app-notes></app-notes>
+                      </ng-template>
+                    </kendo-tabstrip-tab>
+                    <kendo-tabstrip-tab title="Structures" [selected]="tabSection === 'Structures'">
+                      <ng-template kendoTabContent>
+                        <app-structures [propertyId]="propertyId"></app-structures>
+                      </ng-template>
+                    </kendo-tabstrip-tab>
+                    <kendo-tabstrip-tab title="Media" [selected]="tabSection === 'Media'">
+                        <ng-template kendoTabContent>
+                          <app-media></app-media>
+                        </ng-template>
+                      </kendo-tabstrip-tab>
+                      <kendo-tabstrip-tab title="Insurance Docs" [selected]="tabSection === 'Insurance'">
+                        <ng-template kendoTabContent>
+                          <app-insurance-docs></app-insurance-docs>
+                        </ng-template>
+                      </kendo-tabstrip-tab>
+                      <kendo-tabstrip-tab title="Misc. Docs" [selected]="tabSection === 'Misc'">
+                        <ng-template kendoTabContent>
+                          <app-mics-docs></app-mics-docs>
+                        </ng-template>
+                      </kendo-tabstrip-tab>
+                      <kendo-tabstrip-tab title="Measurements" [selected]="tabSection === 'Measurements'">
+                        <ng-template kendoTabContent>
+                          <app-measurements></app-measurements>
+                        </ng-template>
+                      </kendo-tabstrip-tab>
+                </kendo-tabstrip>
+            </div>
+          </div>    
+          <div class="col-4 p-0">
+            <div class="clinet-side-info">
+                <app-client-info></app-client-info>
+             </div>
+          </div>
+    </div>
+  
+</div>
+
+
+
+
